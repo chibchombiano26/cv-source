@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>eventsFirstStage</name>
+    <events>
+        <variable constant="0" name="score" sid="885460398844247" static="0" type="number">0</variable>
+        <event-block sid="522766039840819">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="424825641192585" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="416471675673663" type="Knight">
+                    <param id="0" name="Object">behaivor</param>
+                    <param id="1" name="Image point (optional)">0</param>
+                </action>
+                <action id="0" name="Set text" sid="514342501719132" type="score2">
+                    <param id="0" name="Text">score</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="984681972200823">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="790750221405584" type="Keyboard">
+                    <param id="0" name="Key">37 (Left arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="275855753765007" type="Knight">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="489347251686302">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="888759945549099" type="Keyboard">
+                    <param id="0" name="Key">39 (Right arrow)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="672054262162656" type="Knight">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="540714695523605">
+            <conditions>
+                <condition behavior="Platform" id="1" name="Compare speed" sid="704715607462989" type="behaivor">
+                    <param id="0" name="Comparison">0</param>
+                    <param id="1" name="Speed">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="899981704751011" type="Knight">
+                    <param id="0" name="Animation">&quot;idleKnight&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="449388397281793">
+            <conditions>
+                <condition behavior="Platform" id="3" name="Is jumping" sid="779389477302843" type="behaivor" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="991177528190653" type="Knight">
+                    <param id="0" name="Animation">&quot;jump&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="267369799925675">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="129553135997962" type="behaivor" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="351611252523975" type="Knight">
+                    <param id="0" name="Animation">&quot;run&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="491293841521976">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="245984404654307" type="behaivor">
+                    <param id="0" name="Object">leder</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="150418258886175" type="Knight">
+                    <param id="0" name="Animation">&quot;celebrate&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="708542363056389">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="384286173831359" type="System" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="745928847628700" type="Camera">
+                    <param id="0" name="X">lerp(Self.X,Knight.X,0.03)</param>
+                    <param id="1" name="Y">lerp(Self.Y,Knight.Y,0.03)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="397404922510997">
+            <conditions>
+                <condition id="17" name="On tap object" sid="204783042369918" type="Touch">
+                    <param id="0" name="Object">github</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="920375972939084" type="Browser">
+                    <param id="0" name="URL">&quot;https://github.com/chibchombiano26&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="169087266096327">
+            <conditions>
+                <condition id="17" name="On tap object" sid="926515037333469" type="Touch">
+                    <param id="0" name="Object">cv</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="914391367386229" type="Browser">
+                    <param id="0" name="URL">&quot;https://www.linkedin.com/in/josedouglas&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="522090743128809">
+            <conditions>
+                <condition id="17" name="On tap object" sid="344347197170231" type="Touch">
+                    <param id="0" name="Object">cv</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="8" name="Open URL in new window" sid="164873461871160" type="Browser">
+                    <param id="0" name="URL">&quot;https://goo.gl/baq60F&quot;</param>
+                    <param id="1" name="Tag">&quot;NewWindow&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="353147879212276">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block sid="369424061469265">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="684137510483851" type="Knight">
+                    <param id="0" name="Object">letter2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="305882769630715" type="letter2">
+                    <param id="0" name="Object">Particles</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action id="-9" name="Destroy" sid="822886369032723" type="letter2" />
+            </actions>
+        </event-block>
+        <event-block sid="164540629655417">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="646888961763010" type="Knight">
+                    <param id="0" name="Object">leder</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="602347524792326" type="behaivor">
+                    <param id="0" name="State">1</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="111020005861438" type="behaivor">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="955239260725027">
+            <conditions>
+                <condition id="-22" name="Else" sid="260653505321314" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="8Direction" id="8" name="Set enabled" sid="351656236053405" type="behaivor">
+                    <param id="0" name="State">0</param>
+                </action>
+                <action behavior="Platform" id="11" name="Set enabled" sid="380037885081302" type="behaivor">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="377023022663509">
+            <conditions>
+                <condition id="17" name="On tap object" sid="482154629630310" type="Touch">
+                    <param id="0" name="Object">exit</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="971960373438636" type="Browser">
+                    <param id="0" name="URL">&quot;https://goo.gl/05vOqX&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="595711972566497">
+            <conditions>
+                <condition id="1" name="Is overlapping another object" sid="287524243940082" type="behaivor">
+                    <param id="0" name="Object">fireCelebrateAnimate</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="320311505032736" type="Knight">
+                    <param id="0" name="Animation">&quot;celebrate&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="283393980515808">
+            <conditions>
+                <condition id="17" name="On tap object" sid="466410868459472" type="Touch">
+                    <param id="0" name="Object">myLinkedin</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Go to URL" sid="672967112812955" type="Browser">
+                    <param id="0" name="URL">&quot;https://goo.gl/05vOqX&quot;</param>
+                    <param id="1" name="Target">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="962434114543329">
+            <conditions>
+                <condition behavior="Platform" id="0" name="Is moving" sid="140305485519883" type="behaivor" />
+                <condition behavior="8Direction" id="0" name="Is moving" sid="971597030577367" type="behaivor" />
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="296574691998808" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+                <action id="-10" name="Add to" sid="292178642535428" type="System">
+                    <param id="0" name="Variable">score</param>
+                    <param id="1" name="Value">0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="437642774345224">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>
